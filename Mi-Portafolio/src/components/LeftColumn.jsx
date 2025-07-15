@@ -1,10 +1,12 @@
+import ProfilePhoto from "./ProfilePhoto";
+
 export default function LeftColumn() {
     return (
       <>
         {/* Columna izquierda */}
         <div className="left-column">
           <div className="profile">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVyZmlsfGVufDB8fDB8fHww" alt="Foto de perfil" className="profile-img" />
+            <ProfilePhoto />
             <h2>Tu Nombre</h2>
             <p className="subtitle">Desarrollador Web Full Stack</p>
           </div>
