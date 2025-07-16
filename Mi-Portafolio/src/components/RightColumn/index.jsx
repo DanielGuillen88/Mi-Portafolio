@@ -1,4 +1,5 @@
 import AboutMe from "./aboutme";
+import AboutMyJobs from "./AboutMyJobs";
 import "./index.css";
 
 export default function RightColumn() {
@@ -14,6 +15,12 @@ export default function RightColumn() {
                 <section>
                     
                     <AboutMe />
+
+                </section>
+
+                <section>
+
+                    <AboutMyJobs />
 
                 </section>
 

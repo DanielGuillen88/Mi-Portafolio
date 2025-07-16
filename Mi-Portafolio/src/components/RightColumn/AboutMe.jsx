@@ -10,7 +10,7 @@ export default function AboutMe() {
         <div className="about-me-accordion">
             <h3 className="section-title accordion-header" onClick={toggleAccordion}>
                 Un poco sobre Mí
-                <span className="accordion-icon">{isOpen ? '-' : '+'}</span>
+                <span className="accordion-icon">{isOpen ? '▲' : '▼'}</span>
             </h3>
 
             {/* siempre visible */}
