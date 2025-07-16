@@ -7,7 +7,7 @@ export default function LeftColumn() {
         <div className="left-column">
           <div className="profile">
             <ProfilePhoto />
-            <h2>Tu Nombre</h2>
+            <h2>Daniel Guillén</h2>
             <p className="subtitle">Desarrollador Web Full Stack</p>
           </div>
   

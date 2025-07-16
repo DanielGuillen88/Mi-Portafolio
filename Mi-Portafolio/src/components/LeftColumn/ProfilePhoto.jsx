@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { photo0, photo1, photo2, photo3, photo4, photo5 } from '../img';
+import { photo0, photo1, photo2, photo3, photo4, photo5 } from '../../img';
 
 export default function ProfilePhoto() {
     // 1 lista de fotos

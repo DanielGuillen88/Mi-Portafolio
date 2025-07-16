@@ -1,18 +1,20 @@
+import AboutMe from "./aboutme";
+import "./index.css";
+
 export default function RightColumn() {
     return (
         <>
             {/* Columna derecha */}
             <div className="right-column">
                 <div className="name-title">
-                    <h1>Tu Nombre</h1>
-                    <p className="subtitle">Desarrollador Web Full Stack | Especialista en eCommerce</p>
+                    <h1>Bienvenido a Mi Portafolio</h1>
+                    {/* <p className="subtitle">Desarrollador Web Full Stack | Especialista en eCommerce</p> */}
                 </div>
 
                 <section>
-                    <h3 className="section-title">Sobre Mí</h3>
-                    <p>
-                        Desarrollador web titulado en Desarrollo y Aplicaciones Web (nivel 3) con experiencia en creación de aplicaciones full stack, tiendas online con PrestaShop y análisis de datos con GA4. Apasionado por el desarrollo de PWAs y la optimización del rendimiento web. Combinó habilidades técnicas con conocimientos en marketing digital para ofrecer soluciones integrales.
-                    </p>
+                    
+                    <AboutMe />
+
                 </section>
 
                 <section>
