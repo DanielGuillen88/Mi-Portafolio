@@ -32,7 +32,7 @@ export default function LeftColumn() {
               <li><i className="fab fa-node-js"></i> Node.js, Express, Firebase</li>
               <li><i className="fab fa-php"></i> PHP (WordPress, PrestaShop)</li>
               <li><i className="fas fa-database"></i> MySQL, MongoDB, FireStore</li>
-              <li><i className="fab fa-git-alt"></i> Git, GitHub</li>
+              <li><i className="fa-brands fa-github"></i> Git, GitHub</li>
               <li><i className="fas fa-pencil-ruler"></i> Figma, Gimp</li>
               <li><i className="fa-brands fa-google"></i> Analytics 4, Tag Manager, AdSense</li>
             </ul>
