@@ -13,7 +13,7 @@
 }
 
 .accordion-header:hover {
-    background-color: #1e3a8a; 
+    background-color: #1e3a8a;
     color: white;
 }
 
@@ -44,4 +44,22 @@
 
 .accordion-content .about-me-paragraph:last-child {
     margin-bottom: 0;
+}
+
+.studies-list {
+    list-style-type: none;
+}
+
+/* estilos de enlace profesores */
+.teacher-link {
+    color: #1e3a8a; 
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+.teacher-link:hover {
+    background-color: #1e3a8a; 
+    color: white;
+    border-radius: 3px;
 }
