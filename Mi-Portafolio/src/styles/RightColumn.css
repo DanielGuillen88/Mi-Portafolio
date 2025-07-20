@@ -1,0 +1,134 @@
+/* Columna derecha */
+.right-column {
+    padding: 30px;
+    background-color: #ffffff;
+  }
+  
+  .name-title {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  .subtitle {
+    margin: 5px 0 0;
+    font-weight: normal;
+  }
+  
+  .experience-item, .education-item {
+    margin-bottom: 25px;
+  }
+  
+  .job-title, .degree {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+  }
+  
+  .company, .institution {
+    font-weight: bold;
+  }
+  
+  .date {
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .project-card {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--secondary-color);
+  }
+  
+  .project-title {
+    color: var(--primary-color);
+    margin-top: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .left-column, .right-column {
+        padding: 20px;
+    }
+    
+    .name-title {
+        margin: -20px -20px 20px -20px;
+    }
+  }
+
+/* estilos del aboutme */
+.accordion-header {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.about-me-paragraph {
+    padding: 0 20px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-me-accordion > .about-me-paragraph:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
+
+.accordion-content {
+    padding: 0 20px 20px 20px;
+}
+
+.accordion-content .about-me-paragraph {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.accordion-content .about-me-paragraph:first-child {
+    margin-top: 0;
+}
+
+.accordion-content .about-me-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.studies-list {
+    list-style-type: none;
+}
+
+/* estilos de enlace profesores */
+.teacher-link {
+    color: #1e3a8a; 
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+.teacher-link:hover {
+    background-color: #1e3a8a; 
+    color: white;
+    border-radius: 3px;
+}

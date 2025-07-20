@@ -2,7 +2,7 @@ import AboutMe from "./aboutme";
 // import AboutMyDevExperience from "./AboutMyDevExperience";
 import AboutMyLearning from "./AboutMyLearning";
 import AboutMyJobs from "./AboutMyJobs";
-import "./index.css";
+import "../../styles/RightColumn.css";
 
 export default function RightColumn() {
     return (

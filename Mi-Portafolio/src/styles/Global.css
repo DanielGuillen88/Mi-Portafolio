@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #1e3a8a;
+  --secondary-color: #3b82f6;
+  --accent-color: #60a5fa;
+  --light-bg: #f0f9ff;
+  --dark-text: #1e293b;
+  --light-text: #f8fafc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}

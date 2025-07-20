@@ -1,4 +1,5 @@
 import ProfilePhoto from "./ProfilePhoto";
+import "../../styles/LeftColumn.css";
 
 export default function LeftColumn() {
     return (
