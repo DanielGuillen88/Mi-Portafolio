@@ -1,7 +1,22 @@
+import { useState, useEffect } from "react";
 import ProfilePhoto from "./ProfilePhoto";
 import "../../styles/LeftColumn.css";
 
 export default function LeftColumn() {
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+      const isDarkMode = document.documentElement.classList.contains("dark-mode");
+      setDarkMode(isDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+      const html = document.documentElement;
+      html.classList.toggle("dark-mode");
+      setDarkMode(!darkMode);
+    };
+
     return (
       <>
         {/* Columna izquierda */}
@@ -9,7 +24,10 @@ export default function LeftColumn() {
           <div className="profile">
             <ProfilePhoto />
             <h2>Daniel Guillén</h2>
-            <p className="subtitle">Full Stack Developer</p>
+            <h3 className="subtitle">Full Stack Developer</h3>
+            <span className="dark-mode-toggle" onClick={toggleDarkMode} style={{ marginLeft: "10px", cursor: "pointer" }}>
+            {darkMode ? "Modo Oscuro 🌛" : "Modo Claro ☀️"}
+            </span>
           </div>
   
           <div className="contact-info">

@@ -25,3 +25,18 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+
+/* modo oscuro */
+html.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+
+html.dark-mode svg,
+html.dark-mode video {
+  filter: invert(1) hue-rotate(180deg);
+}
