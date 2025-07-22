@@ -8,73 +8,182 @@ export default function Etif() {
     };
 
     return (
-        <div className="about-me-accordion">
-        <div className="degree accordion-header" onClick={toggleAccordion}>
-        Certificado Profesional en Desarrollo y Aplicaciones Web (Nivel 3) en Etif
-            <span className="accordion-icon">{isOpen ? '🧨' : '🚀'}</span>
-        </div>
+        <div className="bg-white rounded-b-xl shadow-lg overflow-hidden mb-4">
+            <h3 className="accordion-header bg-white border-b-2 border-black text-black p-2 cursor-pointer flex justify-between items-center text-xl fontsemibold transition-colors duration-300 hover:bg-blue-900 hover:text-white"
+               onClick={toggleAccordion}
+            >
+            Cert. Prof. Desarrollo y Aplicaciones Web (Nivel 3) en Etif
+            <span className="text-xl ml-2">{isOpen ? '📘' : '📖'}</span>
+            </h3>
 
-        {/* Primera parte siempre visible */}
-        <p className="about-me-paragraph mt-2">
-            En <b>Etif</b>, obtuve el <b>Certificado Profesional en Desarrollo de Aplicaciones Web</b>. Fue una experiencia muy valiosa, tuve la oportunidad de aprender junto al profesor <a href="https://www.linkedin.com/in/williamscano/" target="_blank" rel="noopener noreferrer" className="teacher-link">Williams</a>. Aunque fue una clase pequeña, el ambiente presencial fue fundamental para mi desarrollo.
-        </p>
+            {/* Contenido del acordeón */}
+            <div className="bg-gray-100 p-4 rounded-b-lg">
+                {/* siempre visible */}
+                <p className="text-gray-800 leading-relaxed mb-3">
+                En <b>Etif</b>, obtuve el <b>Certificado Profesional en Desarrollo de Aplicaciones Web</b>. Fue una experiencia muy valiosa, tuve la oportunidad de aprender junto al profesor <a href="https://www.linkedin.com/in/williamscano/" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 hover:bg-blue-900 hover:text-white">Williams</a>. Aunque fue una clase pequeña, el ambiente presencial fue fundamental para mi desarrollo.
+                </p>
 
-        {/* Más detalles visibles al clicar */}
-        {isOpen && (
-        <div className="accordion-content">
-        <p className="about-me-paragraph">
-            Durante esta formación, profundicé en diversas áreas clave del desarrollo web y la gestión de proyectos:
-        </p>
-        <ul className="studies-list">
-            <li><i className="fas fa-desktop"></i> <b>Programación web en el entorno cliente</b>
-                <ul className="studies-list">
-                    <li><i className="fas fa-file-code"></i> <b>HTML + CSS:</b> Webs mediante lenguajes de marca.</li>
-                    <li><i className="fab fa-bootstrap"></i> <b>Bootstrap:</b> Diseños y maquetación resposivas.</li>
-                    <li><i className="fa-brands fa-js"></i> <b>JavaScript + jQuery:</b> Desarrollo y reutilización de componentes software y multimedia mediante lenguajes.</li>
-                    <li><i className="fas fa-eye"></i> <b>Wave + Lighthouse:</b> Usabilidad y accesibilidad en el entorno cliente.</li>
-                </ul>
-            </li>
-            <br/>
-            <li><i className="fas fa-server"></i> <b>Programación web en el entorno servidor</b>
-                <ul className="studies-list">
-                    <li><i className="fa-brands fa-php"></i> <b>PHP + XAMPP:</b> Desarrollo backend con acceso a bases de datos.</li>
-                    <li><i className="fas fa-database"></i> <b>MySQL:</b> Operaciones CRUD y gestión de datos desde PHP.</li>
-                </ul>
-            </li>
-            <br/>
-            <li><i className="fas fa-cloud-upload-alt"></i> <b>Implantación de aplicaciones Web</b> en entornos internet, intranet y extranet.
-                <ul className="studies-list">
-                    <li><i className="fas fa-upload"></i> <b>FileZilla:</b> Subida de sitios web.</li>
-                    <li><i className="fas fa-globe"></i> <b>InfinityFree:</b> Creación de subdominios y alojamiento webs.</li>
-                    <li><i className="fab fa-wordpress"></i> <b>WordPress y PrestaShop:</b> Creación rápida de sitios web con CMS.</li>
-                </ul>
-            </li>
-            <br/>
-            <li><i className="fa-solid fa-book"></i> <b>Herramientas educativas y gestión de proyectos</b>
-                <ul className="studies-list">
-                    <li><i className="fas fa-chalkboard-teacher"></i> <b>Classroom y MoodleCloud:</b >Manejo de herramientas educativas.</li>
-                    <li><i className="fa-brands fa-github"></i> <b>Git/GitHub:</b> Trabajo en equipo y documentación de trabajo.</li> 
-                </ul>
-            </li>
-            <br/>
-            <li><i className="fas fa-chart-line"></i> <b>SEO, analítica y monetización</b>
-                <ul className="studies-list">
-                <li><i className="fa-brands fa-google"></i> <b>Google Analytics 4: </b> Implementación en webs y maquetación de métricas con <b>Looker</b>.</li>
-                    <li><i className="fa-brands fa-google"></i> <b>Google AdSense:</b> Creación de campañas e inclusión de anuncios en webs.</li>
-                    <li><i className="fas fa-search-dollar"></i> Análisis de <b>keywords con Semrush</b> o similares para SEO.</li>
-                    <li><i className="fas fa-sitemap"></i> Creación de archivos <b>sitemap.xml y robots.txt</b> para optimización de motores de búsqueda.</li>
-                </ul>
-            </li>
-            <br/>
-            <li><i className="fas fa-pizza-slice"></i> <b>Extras</b>
-                <ul className="studies-list">
-                    <li><i className="fab fa-android"></i> Conversión de webs a formato <b>APK</b>.</li>
-                </ul>
-            </li>
+            {/* visibles al clicar */}
+            {isOpen && (
+            <div className="transition-all duration-300 ease-in-out">
+                <p className="text-gray-800 leading-relaxed mb-3">
+                Durante esta formación, profundicé en diversas áreas clave del desarrollo web y la gestión de proyectos:
+                </p>
+            <ul className="list-none pl-0 space-y-4">
 
-        </ul>
+                <li className="flex items-start text-gray-800">
+                    <i className="fas fa-desktop mr-2 mt-1"></i>
+                    <div>
+                        <b>Programación web en el entorno cliente</b>
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-file-code mr-2 mt-1"></i>
+                                <div>
+                                    <b>HTML + CSS:</b> Webs mediante lenguajes de marca.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fab fa-bootstrap mr-2 mt-1"></i>
+                                <div>
+                                    <b>Bootstrap:</b> Diseños y maquetación responsivas.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fa-brands fa-js mr-2 mt-1"></i>
+                                <div>
+                                    <b>JavaScript + jQuery:</b> Desarrollo y reutilización de componentes software y multimedia mediante lenguajes.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-eye mr-2 mt-1"></i>
+                                <div>
+                                    <b>Wave + Lighthouse:</b> Usabilidad y accesibilidad en el entorno cliente.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li className="flex items-start text-gray-800">
+                    <i className="fas fa-server mr-2 mt-1"></i>
+                    <div>
+                        <b>Programación web en el entorno servidor</b>
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fa-brands fa-php mr-2 mt-1"></i>
+                                <div>
+                                    <b>PHP + XAMPP:</b> Desarrollo backend con acceso a bases de datos.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-database mr-2 mt-1"></i>
+                                <div>
+                                    <b>MySQL:</b> Operaciones CRUD y gestión de datos desde PHP.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li className="flex items-start text-gray-800">
+                    <i className="fas fa-cloud-upload-alt mr-2 mt-1"></i>
+                    <div>
+                        <b>Implantación de aplicaciones Web</b> en entornos internet, intranet y extranet.
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-upload mr-2 mt-1"></i>
+                                <div>
+                                    <b>FileZilla:</b> Subida de sitios web.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-globe mr-2 mt-1"></i>
+                                <div>
+                                    <b>InfinityFree:</b> Creación de subdominios y alojamiento webs.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fab fa-wordpress mr-2 mt-1"></i>
+                                <div>
+                                    <b>WordPress y PrestaShop:</b> Creación rápida de sitios web con CMS.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li className="flex items-start text-gray-800">
+                    <i className="fa-solid fa-book mr-2 mt-1"></i>
+                    <div>
+                        <b>Herramientas educativas y gestión de proyectos</b>
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-chalkboard-teacher mr-2 mt-1"></i>
+                                <div>
+                                    <b>Classroom y MoodleCloud:</b> Manejo de herramientas educativas.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fa-brands fa-github mr-2 mt-1"></i>
+                                <div>
+                                    <b>Git/GitHub:</b> Trabajo en equipo y documentación de trabajo.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li className="flex items-start text-gray-800">
+                    <i className="fas fa-chart-line mr-2 mt-1"></i>
+                    <div>
+                        <b>SEO, analítica y monetización</b>
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fa-brands fa-google mr-2 mt-1"></i>
+                                <div>
+                                    <b>Google Analytics 4:</b> Implementación en webs y maquetación de métricas con <b>Looker</b>.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fa-brands fa-google mr-2 mt-1"></i>
+                                <div>
+                                    <b>Google AdSense:</b> Creación de campañas e inclusión de anuncios en webs.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-search-dollar mr-2 mt-1"></i>
+                                <div>
+                                    Análisis de <b>keywords con Semrush</b> o similares para SEO.
+                                </div>
+                            </li>
+                            <li className="flex items-start text-gray-700">
+                                <i className="fas fa-sitemap mr-2 mt-1"></i>
+                                <div>
+                                    Creación de archivos <b>sitemap.xml y robots.txt</b> para optimización de motores de búsqueda.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li className="flex items-start text-gray-800">
+                    <i className="fas fa-pizza-slice mr-2 mt-1"></i>
+                    <div>
+                        <b>Extras</b>
+                        <ul className="list-none pl-6 mt-2 space-y-2">
+                            <li className="flex items-start text-gray-700">
+                                <i className="fab fa-android mr-2 mt-1"></i>
+                                <div>
+                                    Conversión de webs a formato <b>APK</b>.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         )}
+        </div>
     </div>
     );
 }
