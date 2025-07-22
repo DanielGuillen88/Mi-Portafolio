@@ -22,8 +22,9 @@ export default function PlayingWithCss() {
       return (
 <div className="">
             {/* Encabezado actúa como botón */}
+            {/* Encabezado actúa como botón */}
             <h3
-                className="degree accordion-header bg-blue-600 text-white p-4 cursor-pointer flex justify-between items-center text-lg font-semibold transition-colors duration-300 hover:bg-blue-700"
+                className="degree accordion-header p-1 flex justify-between items-center"
                 onClick={toggleAccordion}
             >
                 Playing with CSS <i className="fas fa-paint-brush"></i> 
