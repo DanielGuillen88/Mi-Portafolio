@@ -8,13 +8,13 @@ export default function AboutMe() {
 
     return (
         <div className="about-me-accordion">
-            <h3 className="section-title accordion-header" onClick={toggleAccordion}>
-                Un poco sobre Mí
+            <h3 className="accordion-header" onClick={toggleAccordion}>
+                UN POCO SOBRE MÍ
                 <span className="accordion-icon">{isOpen ? '▲' : '▼'}</span>
             </h3>
 
             {/* siempre visible */}
-            <p className="about-me-paragraph">
+            <p className="about-me-paragraph mt-2">
             Fuera del ámbito profesional, soy <b>aventurero</b> y curioso por la naturaleza. Disfruto de los <b>viajes</b> (Indonesia es mi destino favorito, de momento), amo la <b>pizza de pepperoni</b> y mi pasión por las <b>motos</b> subraya mi deseo de libertad.
             </p>
 

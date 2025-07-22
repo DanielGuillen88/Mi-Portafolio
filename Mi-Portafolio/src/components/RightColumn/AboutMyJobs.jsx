@@ -14,7 +14,7 @@ export default function AboutMyJobs() {
             </h3>
 
             {/* Párrafo siempre visible - Un resumen o la parte más reciente/relevante */}
-            <p className="about-me-paragraph">
+            <p className="about-me-paragraph mt-2">
                 Mi vida laboral esta llena de <b>experiencias diversas, como en logística, administración, transporte</b> y acabando ahora en el <b>desarrollo de aplicaciones</b>. Esta evolución me ha dotado de una perspectiva diferente para resolver problemas y optimizar procesos.
             </p>
 
