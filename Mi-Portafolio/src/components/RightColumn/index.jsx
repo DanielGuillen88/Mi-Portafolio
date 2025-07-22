@@ -12,7 +12,6 @@ export default function RightColumn() {
                 <div className="name-title">
                     <h1>Bienvenido a Mi Portafolio</h1>
                 </div>
-                {/* <h3 className="section-title">Un poco sobre mí</h3> */}
 
                 <section>
                     
