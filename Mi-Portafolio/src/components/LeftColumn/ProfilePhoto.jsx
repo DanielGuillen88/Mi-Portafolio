@@ -24,14 +24,13 @@ export default function ProfilePhoto() {
     };
 
     return (
-        <div className="profile-photo">
-            <img
-                src={photos[currentPhotoIndex]}
-                alt="Foto de perfil"
-                className="profile-img"
-                onClick={handlePhotoClick}
-                style={{ cursor: 'pointer' }}
-            />
-        </div>
+
+        <img
+            src={photos[currentPhotoIndex]}
+            alt="Foto de perfil"
+            className="w-48 h-48 rounded-full object-cover border-4 border-blue-400 mx-auto block mb-5 cursor-pointer shadow-lg"
+            onClick={handlePhotoClick}
+        />
+        
     );
 }
