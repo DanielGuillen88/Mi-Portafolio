@@ -6,6 +6,7 @@ import photo4 from './004.jpg';
 import photo5 from './005.jpg';
 import photo6 from './006.jpg';
 import photo7 from './007.jpg';
+import cv from './cv.png';
 import creeper from './creeper.jpg';
 import elviaje from './elviaje.jpg';
 import estudiantes from './estudiantes.jpg';
@@ -37,6 +38,7 @@ export {
     photo5,
     photo6,
     photo7,
+    cv,
     creeper,
     elviaje,
     estudiantes,
