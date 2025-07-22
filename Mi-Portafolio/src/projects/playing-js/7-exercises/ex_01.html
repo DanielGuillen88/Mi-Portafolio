@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 1</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          1
+      </header>
+      <section>
+        <p>
+          Crear una función que sustituya el texto de la caja blanca con "Hello World"
+        </p>
+      </section>
+      <footer>
+        <div id="whiteBox">
+          This message must be edited by javascript.
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_02.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+<script>
+
+      //cambiar texto
+      const whiteBox = document.getElementById('whiteBox')
+      const hello = "Hello World"
+      const message = "This message must be edited by javascript."
+
+        whiteBox.addEventListener('click', () => {
+          whiteBox.textContent = (whiteBox.textContent === hello) ? message : hello
+          })
+
+</script>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 9</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          9
+      </header>
+      <section>
+        <p>
+          Haz que esta calculadora funcione con JavaScript.
+        </p>
+
+      </section>
+      <div class="footer">
+        <div class="calculatrice">
+          <div class="result">0
+          </div>
+          <div class="buttons">
+            <div id="borrarTodo">&larr;</div>
+            <div id="borrar">C</div>
+            <div id="%">%</div>
+            <div id="/">/</div>
+            <div id="7">7</div>
+            <div id="8">8</div>
+            <div id="9">9</div>
+            <div id="*">x</div>
+            <div id="4">4</div>
+            <div id="5">5</div>
+            <div id="6">6</div>
+            <div id="-">-</div>
+            <div id="1">1</div>
+            <div id="2">2</div>
+            <div id="3">3</div>
+            <div id="+">+</div>
+            <div id="0">0</div>
+            <div id=".">.</div>
+            <div class="equal">=</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="ex_08.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <!-- <a href="ex_10.html" class="btn next">
+        Next &rarr;
+      </a> -->
+    </nav>
+  </div>
+</body>
+<script>
+  class Calculadora {
+  sumar(a, b) { return a + b }
+  restar(a, b) { return a - b }
+  multiplicar(a, b) { return a * b }
+  dividir(a, b) { return b === 0 ? "Error: División por cero" : a / b }
+  porcentaje(a, b) { return (a * b) / 100 }
+  borrar(ultimo) { return ultimo.toString().slice(0, -1) }
+  borrarTodo() { return "" }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const calcular = new Calculadora()
+  let pantalla = ""
+  const result = document.querySelector(".result")
+
+  function actualizarPantalla(valor) {
+    result.textContent = valor || "0"
+  }
+
+  function recibirValor(valor) {
+    pantalla += valor
+    actualizarPantalla(pantalla)
+  }
+
+  document.getElementById("borrar").addEventListener("click", () => {
+    pantalla = calcular.borrar(pantalla)
+    actualizarPantalla(pantalla)
+  })
+
+  document.getElementById("borrarTodo").addEventListener("click", () => {
+    pantalla = calcular.borrarTodo()
+    actualizarPantalla(pantalla)
+  })
+
+  document.querySelector(".equal").addEventListener("click", () => {
+    try {
+      const pantallaFormateada = pantalla.replace(/x/g, "*").replace(/%/g, "/100")
+      pantalla = eval(pantallaFormateada).toString()
+      actualizarPantalla(pantalla)
+    } catch (error) {
+      pantalla = ""
+      actualizarPantalla("Error")
+    }
+  })
+
+  document.querySelectorAll(".buttons div").forEach(div => {
+    const id = div.getAttribute("id")
+    if (id && id !== "borrarTodo" && id !== "borrar" && !div.classList.contains("equal")) {
+      div.addEventListener("click", () => recibirValor(id === "x" ? "*" : id))
+    }
+  })
+
+  window.addEventListener("keydown", (event) => {
+    const botones = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "x", "*", "/", "%", "."]
+    if (botones.includes(event.key)) {
+      const key = event.key === "x" ? "*" : event.key
+      recibirValor(key)
+    } else if (event.key === "Enter") {
+      document.querySelector(".equal").click()
+    } else if (event.key === "Backspace") {
+      document.getElementById("borrar").click()
+    } else if (event.key.toLowerCase() === "c") {
+      document.getElementById("borrarTodo").click()
+    }
+  })
+})
+
+</script>
+</html>

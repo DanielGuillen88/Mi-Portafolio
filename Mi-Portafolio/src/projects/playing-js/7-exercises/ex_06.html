@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 6</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          6
+      </header>
+      <section>
+        <pre>
+          var mage = new Hero("amadeus", "mage", 10, 3);
+          var guerrier = new Hero("pontius", "guerrier", 3, 10);
+          mage.toString();
+          guerrier.toString();
+        </pre>
+        <p>
+          Completa il código javascript para que, dentro de la caja blanca, aparezca:
+        </p>
+        <br>
+        <p>
+          "Soy Amadeus el Mago, tengo 10 puntos de magia y 3 de fuerza!"
+          "Soy Pontius el Guerrero, tengo 3 puntos de magia y 10 de fuerza !"
+        </p>
+      </section>
+      <footer>
+        <div>
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_05.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_07.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const whiteBox = document.querySelector('footer div')
+
+    function Hero(nombre, tipo, magia, fuerza) {
+        this.nombre = nombre
+        this.tipo = tipo
+        this.magia = magia
+        this.fuerza = fuerza
+
+        this.toString = function() {
+            return `Soy ${this.nombre} el ${this.tipo}, tengo ${this.magia} puntos de magia y ${this.fuerza} de fuerza!`
+        }
+    }
+
+    const mage = new Hero("Amadeus", "mago", 10, 3)
+    const guerrier = new Hero("Pontius", "guerrero", 3, 10)
+
+    whiteBox.textContent = mage.toString() + " " + guerrier.toString()
+})
+</script>
+
+</html>

@@ -1,0 +1,94 @@
+body {
+  padding: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  height: 12rem;
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  align-content: center;
+}
+
+/* .footer-1 {
+  text-align: left;
+  background: royalblue;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-2 {
+  text-align: left;
+  background: goldenrod;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+} */
+
+/* tamaño pequeño */
+@media only screen and (max-width: 575px) {
+  .header {
+    background: yellow;
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .item {
+    background: red;
+  }
+  .footer-1, .footer-2 {
+    display: none;
+  }
+}
+/* tamaño mediano */
+@media only screen and (min-width: 576px) {
+  .header {
+    background: greenyellow;
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+  .card {
+    width: 50%;
+  }
+  .item {
+    background: purple;
+  }
+  .footer-2 {
+    text-align: left;
+    background: goldenrod;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+/* tamaño grande */
+@media only screen and (min-width: 992px) {
+  .header {
+    background: greenyellow;
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+  .card {
+    width: 33.33%;
+  }
+  .item {
+    background: purple;
+  }
+  .footer-1 {
+    text-align: left;
+    background: royalblue;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .footer-2 {
+    display: none;
+  }
+}

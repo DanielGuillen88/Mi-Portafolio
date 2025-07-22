@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <title>Poderosos Jabones</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="carrito.css">
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-success" href="#">Poderosos Jabones 🧼</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-info" href="#">Azul</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Rosa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success" href="#">Verde</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#">Amarillo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">🛒</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar 🔎</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+<main class="container">
+    <h1 class="p-2 text-center">Carrito de Compras 🛒</h1>
+
+    <div class="row">
+
+        <!-- Carousel de Productos -->
+        <div class="col-12 col-md-4">
+
+            <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+
+
+                                <!-- Indicadores -->
+            <div class="carousel-indicators mb-0">
+                <button type="button" data-bs-target="#carouselProductos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselProductos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselProductos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="producto card border-primary p-3 text-center"
+                                data-id="1" data-nombre="Jabón 1" data-precio="10.99">
+                                <img src="image/001.jpg" class="card-img-top mx-auto d-block"
+                                    alt="Jabón 1" style="max-width: 200px;">
+                                <div class="card-body">
+                                    <h3 class="card-title">Jabón 1</h3>
+                                    <p class="card-text">$10.99</p>
+                                    <button class="btn btn-outline-secondary agregar-carrito">Comprar 💸</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="producto card border-primary p-3 text-center"
+                                data-id="2" data-nombre="Jabón 2" data-precio="15.99">
+                                <img src="image/002.jpg" class="card-img-top mx-auto d-block"
+                                    alt="Jabón 2" style="max-width: 200px;">
+                                <div class="card-body">
+                                    <h3 class="card-title">Jabón 2</h3>
+                                    <p class="card-text">$15.99</p>
+                                    <button class="btn btn-outline-secondary agregar-carrito">Comprar 💸</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="producto card border-primary p-3 text-center"
+                                data-id="3" data-nombre="Jabón 3" data-precio="20.99">
+                                <img src="image/003.jpg" class="card-img-top mx-auto d-block"
+                                    alt="Jabón 3" style="max-width: 200px;">
+                                <div class="card-body">
+                                    <h3 class="card-title">Jabón 3</h3>
+                                    <p class="card-text">$20.99</p>
+                                    <button class="btn btn-outline-secondary agregar-carrito">Comprar 💸</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrito de compras -->
+        <div class="col-12 col-md-8">
+            <div class="carrito card border-secondary">
+                <div class="card-header bg-secondary text-white">
+                    <h2 class="mb-0">Contenido del Carrito</h2>
+                </div>
+
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0 align-middle text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carrito-body" class="table-dark">
+                            <!-- Aquí se mostrarán los productos del carrito -->
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-secondary text-white">
+                                <td colspan="3" class="text-end fw-bold">Total</td>
+                                <td id="total-carrito">$0.00</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Botón que abre el modal -->
+            <button class="btn btn-outline-success mt-2" data-bs-toggle="modal" data-bs-target="#finalizarCompraModal">
+              Finalizar compra 🏆
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="finalizarCompraModal" tabindex="-1" aria-labelledby="finalizarCompraLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Header -->
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="finalizarCompraLabel">Datos y Pago 💳 </h5>
+                  </div>
+
+                  <!-- Body -->
+                  <div class="modal-body">
+                    <form>
+
+                      <!-- Nombre -->
+                      <div class="mb-3">
+                        <label for="nombre" class="form-label">Datos de contacto</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Su nombre" required>
+                      </div>
+
+                      <!-- Apellido -->
+                      <div class="mb-3">
+                        <input type="text" class="form-control" id="apellido" placeholder="Sus apellidos" required>
+                      </div>
+
+                                            <!-- Teléfono -->
+                      <div class="mb-3">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Su número de teléfono" required>
+                      </div>
+
+                      <!-- Correo Electrónico -->
+                      <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Su correo" required>
+                      </div>
+
+                      <!-- Dirección -->
+                      <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección de entrega</label>
+                        <input type="text" class="form-control" id="direccion" placeholder="Calle, número, ciudad" required>
+                      </div>
+
+
+
+                      <!-- Información de tarjeta -->
+                      <div class="mb-3">
+                        <label for="tarjeta" class="form-label">Datos de Pago</label>
+                        <input type="text" class="form-control" id="tarjeta" placeholder="Su número de tarjeta" maxlength="19" required>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6 mb-3">
+                          <input type="text" class="form-control" id="expiracion" placeholder="Caducidad MM/AA" maxlength="5" required>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                          <input type="password" class="form-control" id="cvv" placeholder="Número CVV" maxlength="4" required>
+                        </div>
+                      </div>
+
+                        <div class="form-check mb-3">
+                          <input class="form-check-input" type="checkbox" id="terminos" required>
+                          
+                          <label class="form-check-label" for="terminos">
+                            Acepto los
+                          </label>
+
+                          <a href="#"
+                             type="button" class="text-white me-3 text-decoration-none" data-bs-dismiss="modal"
+
+                             data-bs-toggle="offcanvas" data-bs-target="#terminosCondiciones" role="button" aria-controls="terminosCondiciones"
+
+                             >Términos y Condiciones
+                          </a>
+                        </div>
+
+                    </form>
+                  </div>
+
+                  <!-- Footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Confirmar Compra ✅</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+    </div>
+</main>
+
+<footer class="bg-primary text-white text-center py-3 mt-4" data-bs-theme="dark">
+    <div class="container">
+        <p class="mb-1">&copy; 2025 Poderosos Jabones 🧼. Todos los derechos reservados.</p>
+        <div>
+            <!-- Botón que abre el Offcanvas -->
+        <a href="#" class="text-white me-3 text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#politicaPrivacidad" role="button" aria-controls="politicaPrivacidad">
+          Política de Privacidad
+        </a>
+
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="politicaPrivacidad" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Política de Privacidad</h5>
+            <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button> -->
+          </div>
+
+          <div class="offcanvas-body">
+
+            <p><strong>1. ¿Qué datos recogemos?</strong><br>
+            Solo lo básico:</p>
+            <ul>
+              <li>Tu <strong>nombre</strong> (para no llamarte "cliente anónimo").</li>
+              <li>Tu <strong>correo</strong> (para enviarte ofertas y memes limpios).</li>
+              <li>Tu <strong>dirección</strong> (para que los jabones lleguen a tu casa, no a la del vecino).</li>
+              <li>Y tu <strong>pago</strong>, porque el jabón no se paga solo.</li>
+            </ul>
+
+            <p><strong>2. ¿Qué hacemos con tus datos?</strong></p>
+            <ul>
+              <li>Enviarte tus pedidos de jabones como si fueran oro líquido.</li>
+              <li>Mandarte correos sin spam (nos cae mal el spam).</li>
+              <li>Mejorar nuestra web para que brille más que tu piel después de usar nuestros jabones.</li>
+            </ul>
+
+            <p><strong>3. ¿Vendemos tus datos?</strong><br>
+            Jamás. Ni por toneladas de manteca de karité.</p>
+
+            <p><strong>4. Cookies (sin chocolate)</strong><br>
+            Usamos cookies para que tu carrito no olvide lo que querías. Puedes desactivarlas… aunque el carrito se va a poner triste.</p>
+
+            <p><strong>5. Seguridad</strong><br>
+            Tus datos están más protegidos que el último jabón en la regadera del gimnasio. Prometido.</p>
+
+            <p><strong>6. ¿Dudas?</strong><br>
+            ✉ <a href="mailto:hola@poderososjabones.com">Escribenos un correo.</a><br>
+            ¡Te respondemos rápido! (Salvo que estemos enjabonados).</p>
+
+            <p><strong>Fin de la historia:</strong><br>
+            Cuidamos tus datos como cuidamos tu piel: con cariño y buen humor.</p>
+          </div>
+        </div>
+
+                    <!-- Botón que abre el Offcanvas -->
+        <a href="#" class="text-white me-3 text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#terminosCondiciones" role="button" aria-controls="terminosCondiciones">
+          Términos y Condiciones
+        </a>
+
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="terminosCondiciones" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Términos y Condiciones</h5>
+            <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button> -->
+          </div>
+
+          <div class="offcanvas-body">
+
+                <p>Antes de llenar tu carrito de maravillas aromáticas, échale un ojo a nuestros términos.</p>
+
+                <p><strong>1. Uso del sitio:</strong><br>
+                Navegar nuestra web es gratis. Comprar jabones… no tanto. Pero prometemos que cada peso invertido hará que huelas glorioso/a.</p>
+
+                <p><strong>2. Productos:</strong><br>
+                Nuestros jabones son tan buenos como los describimos. Sin embargo, si tu piel es más delicada que un pétalo en primavera, revisa los ingredientes antes de usarlos.</p>
+
+                <p><strong>3. Compras:</strong><br>
+                Haces un pedido, nosotros lo preparamos con amor (y guantes limpios) y lo enviamos. Si algo sale mal, contáctanos. No mordemos. Solo enjabonamos.</p>
+
+                <p><strong>4. Devoluciones:</strong><br>
+                Si el jabón llega roto, equivocado o sin magia, tienes 7 días para avisarnos. No aceptamos devoluciones de jabones usados (por razones obvias… y sanitarias).</p>
+
+                <p><strong>5. Propiedad intelectual:</strong><br>
+                Todo el contenido de esta web (incluyendo los chistes malos) es propiedad de Jabones Poderosos S.A. No copies sin permiso. O al menos mándanos un jabón a cambio.</p>
+
+                <p><strong>6. Cambios en los términos:</strong><br>
+                Si algún día cambiamos estas reglas, te lo contaremos (sin letra chiquita). Pero siempre buscando tu bienestar… y tu frescura.</p>
+
+                <p><strong>7. Contacto:</strong><br>
+                ✉ <a href="mailto:hola@poderososjabones.com">Escribenos un correo.</a><br>
+                ¡Estamos para ti! Si tienes dudas, quejas o quieres recomendarnos un nuevo aroma.</p>
+
+                <p><strong>En resumen:</strong><br>
+                Compra jabones, úsalo bien, sé feliz y huele increíble.</p>
+              </div>
+        </div>
+
+
+    </div>
+
+<a class="btn btn-outline-success mt-2" href="https://danielguillen.free.nf/">Volver página principal</a></footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="carrito.js">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+Leche, 2 litros, Mercadona
+Pan, 1 unidad, Bon Preu
+Huevos, 12 unidades, LIDL
+Manzanas, 1 kg, Caprabo
+Plátanos, 1 kg, Consum
+Pollo, 1 kg, Bon Area
+Arroz, 2 kg, Condis
+Pasta, 1 paquete, Mercadona
+Salsa de tomate, 1 bote, Bon Preu
+Aceite de oliva, 1 litro, Caprabo
+Azúcar, 1 kg, LIDL
+Sal, 1 kg, Consum
+Café, 250 g, Condis
+Té, 20 bolsitas, Mercadona
+Galletas, 1 paquete, Bon Area
+Mantequilla, 250 g, Caprabo
+Yogur, 4 unidades, LIDL
+Queso, 300 g, Consum
+Jamón, 200 g, Bon Preu
+Carne de res, 1 kg, Condis
+Pescado, 1 kg, Mercadona
+Verduras variadas, 1 kg, Bon Area
+Lechuga, 1 unidad, Caprabo
+Tomates, 1 kg, LIDL
+Zanahorias, 500 g, Consum
+Cebollas, 1 kg, Bon Preu
+Ajo, 100 g, Caprabo
+Pimientos, 500 g, Mercadona
+Frutos secos, 200 g, LIDL
+Chocolate, 100 g, Bon Area
+Sopa instantánea, 5 paquetes, Consum
+Lentejas, 1 kg, Condis
+Garbanzos, 1 kg, Mercadona
+Salsa de soya, 1 botella, Bon Preu
+Mostaza, 1 bote, Caprabo
+Mayonesa, 1 bote, LIDL
+Ketchup, 1 bote, Consum
+Tortillas, 1 paquete, Bon Area
+Helado, 1 litro, Mercadona
+Cereales, 1 paquete, Caprabo
+Leche condensada, 1 lata, LIDL
+Puré de patatas, 1 caja, Bon Preu
+Frutas en conserva, 2 latas, Consum
+Vino, 1 botella, Condis
+Cerveza, 6 latas, Mercadona
+Refrescos, 2 litros, Bon Area
+Agua embotellada, 6 botellas, LIDL
+Jabón de lavar, 1 paquete, Caprabo
+Papel higiénico, 12 rollos, Consum
+Detergente, 1 botella, Bon Preu

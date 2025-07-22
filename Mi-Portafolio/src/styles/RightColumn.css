@@ -83,7 +83,7 @@
 
 .accordion-header:hover {
     background-color: #1e3a8a;
-    color: white;
+    /* color: white; */
 }
 
 .about-me-paragraph {

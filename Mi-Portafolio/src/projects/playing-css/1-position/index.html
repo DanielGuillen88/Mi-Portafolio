@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position 🎨</title>
+</head>
+<style>
+    body{
+        border: 5px solid black;
+        height: 1800px;
+        margin: 3rem 2rem 3rem 2rem;
+    
+    }
+    .static{
+        position: static;
+        top: 10px;
+        /* margin-top: 10px; */
+        margin-left: 50px;
+        background-color: red;
+        border-radius: 100px;
+        height: 50px;
+        width: 50px;
+    }
+    .relative{
+        width: 0;
+        height: 0;
+        border: 25px solid transparent;
+        border-top: 0;
+        border-bottom: 50px solid orange;
+        position: relative;
+        top: 10px;
+        margin-left: 50px;
+    }
+    .fixed{
+        position: fixed;
+        top: 10px;
+        margin-left: 150px;
+        background-color: yellow;
+        height: 50px;
+        width: 50px;
+    }
+    .absolute{
+        position: sticky;
+        top: 10px;
+        margin-left: 200px;
+        background-color: blue;
+        height: 50px;
+        width: 50px;
+    }
+    .sticky{
+        position: sticky;
+        top: 10px;
+        margin-left: 100px;
+        background-color: green;
+        height: 50px;
+        width: 50px;
+    }
+
+</style>
+<body>
+    <div class="static">static</div>
+    <div class="relative">relative</div>
+    <div class="fixed">fixed</div>
+    <div class="absolute">absolute</div>
+    <div class="sticky">sticky</div>
+</body>
+</html>

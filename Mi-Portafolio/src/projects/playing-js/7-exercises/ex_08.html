@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 8</title>
+  <link rel="stylesheet" href="style/style.css">
+  </head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          8
+      </header>
+      <section>
+        <p>
+          Haz que sea posible mover (drag'n'drop) el cuadrado negro que está dentro de la caja blanca.
+        </p>
+        <p>
+          En la segunda caja blanca se tendrán que mostrar las coordinadas relativas del cuadradito negro.
+        <p>
+      </section>
+      <footer>
+        <div>
+          <canvas style="position: absolute"></canvas>
+        </div>
+        <div id="mensaje">
+          Coordinadas actuales => {x:?, y:?}
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_07.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_09.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+<script>
+  const canvas = document.querySelector("canvas")
+const mensaje = document.getElementById("mensaje")
+
+let posX = 378
+let posY = 177
+canvas.style.left = `${posX}px`
+canvas.style.top = `${posY}px`
+
+function updatemensaje() {
+    mensaje.textContent = `Coordenadas actuales => {x: ${posX}px, y: ${posY}px}`
+}
+
+window.addEventListener("keydown", (event) => {
+    const step = 5
+    switch (event.key) {
+        case "ArrowUp":
+            console.log("accionado arriba")
+            posY = Math.max(155, posY - step)
+            break
+        case "ArrowDown":
+            posY = Math.min(195, posY + step) 
+            break
+        case "ArrowLeft":
+            posX = Math.max(30, posX - step)
+            break
+        case "ArrowRight":
+            posX = Math.min(708, posX + step)
+            break
+    }
+    canvas.style.left = `${posX}px`
+    canvas.style.top = `${posY}px`
+    updatemensaje()
+})
+
+
+updatemensaje()
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 3</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          3
+      </header>
+      <section>
+        <p>
+          Clicando en el blanco se abrirá una ventana de Pop-up" preguntando: "<em>Cómo te llamas?</em>"
+        </p>
+        <p>
+          El popup no se cerrará hasta que el usuario no escriba un nombre 
+       </p>
+        <p>
+          En cuanto se escriba el nombre, deberá aparecer una ventana de confirmación "<em>Estás seguro/a que <strong>*nombre*</strong> es tu verdadero nombre?</em>"
+        </p>
+        <p>
+          Si se confirma, aparecerá "<em>Hola <strong>*name*</strong> !</em>" en la caja blanca y también en una ventana popup de alerta.
+        </p>
+      </section>
+      <footer>
+        <div id="whiteBox"></div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_02.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_04.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+<script>
+      const whiteBox = document.getElementById('whiteBox')
+
+      whiteBox.addEventListener('click', () => {
+      let name = ''
+      let confirmation = false
+      while (!confirmation) {
+      
+        while (!name) {
+            name = prompt("¿Cómo te llamas?")
+        }
+
+        confirmation = confirm(`¿Estás seguro/a que "${name}" es tu verdadero nombre?`)
+
+        if (!confirmation) {
+          name = ''
+        }
+    }
+          whiteBox.textContent = `Hola ${name} !👋`
+          alert(`Hola ${name} !👋`)
+    })
+</script>
+
+
+</html>

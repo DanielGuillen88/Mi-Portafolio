@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 4</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          4
+      </header>
+      <section>
+        <p>
+          Enseña en la caja blanca los ULTIMOS 42 carácteres escritos en el teclado desde la abertura de la página.
+        </p>
+      </section>
+      <footer>
+        <div id="whiteBox">
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_03.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_05.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+
+  </div>
+</body>
+<script>
+  const whiteBox = document.getElementById('whiteBox')
+  let countChart = ''
+
+  // escribir en la caja
+  document.addEventListener('keydown', (event) => {
+      const key = event.key;
+
+      // if (key.length = 1) {
+        if (key.length == 1) {
+          countChart += key
+
+          if (countChart.length > 42) {
+              countChart = countChart.slice(-42)
+          }
+
+          whiteBox.textContent = countChart
+      }
+  })
+</script>
+</html>

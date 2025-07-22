@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 5</title>
+  <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          5
+      </header>
+      <section>
+        <p>
+          Haz que funcionen los siguientes botones. Respectivamente, el botón más y menos permiten aumentar y disminuir el tamaño de la fuente utilizada en esta página web.
+        </p>
+        <p>
+          El drop-down menu hará cambiar el color de background. 
+        </p>
+      </section>
+      <footer>
+        <div id="whiteBox" style="background-color: #ffffff;">
+          <button id="increaseFontSize">+</button>
+          <button id="decreaseFontSize">-</button>
+          <select id="colorSelector">
+            <option value="#ffffff">Background color</option>
+            <option value="#1abc9c">Turquoise</option>
+            <option value="#f1c40f">Sun Flower</option>
+            <option value="#d35400">Pumpkin</option>
+            <option value="#e74c3c">Alizarin</option>
+            <option value="#40d47e">Emerald</option>
+            <option value="#bdc3c7">Peter River</option>
+          </select>
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_04.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_06.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+
+<script>
+
+  // tamaño fuente
+    const increaseFontButton = document.getElementById('increaseFontSize')
+    const decreaseFontButton = document.getElementById('decreaseFontSize')
+
+  // aumentar
+    increaseFontButton.addEventListener('click', () => {
+        let oldFontSize = window.getComputedStyle(document.body).fontSize
+        let newFontSize = parseFloat(oldFontSize) + 2
+        if (newFontSize <= 26) {
+        document.body.style.fontSize = newFontSize + 'px'
+        }
+    })
+
+  // disminuir
+    decreaseFontButton.addEventListener('click', () => {
+        let oldFontSize = window.getComputedStyle(document.body).fontSize
+        let newFontSize = parseFloat(oldFontSize) - 2
+        if (newFontSize >= 12) { 
+            document.body.style.fontSize = newFontSize + 'px'
+        }
+    })
+
+  // cambiar color
+  const colorSelector = document.getElementById('colorSelector')
+  const whiteBox = document.getElementById('whiteBox')
+
+  colorSelector.addEventListener('change', (event) => {
+
+      const selectedColor = event.target.value;
+      
+      if (selectedColor) {
+        whiteBox.style.backgroundColor = selectedColor
+      }
+  })
+</script>
+
+</html>

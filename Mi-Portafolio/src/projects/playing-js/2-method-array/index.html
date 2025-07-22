@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pruebas métodos arrays</title>
+    <script src="function.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+    h1 {
+        color: #2c3e50;
+    }
+    pr {
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+    input[type="text"], input[type="number"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+    }
+    input[type="button"] {
+        padding: 10px 15px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="button"]:hover {
+        background-color: #c0392b;
+    }
+</style>
+<body>
+    <h1>Pruebas con diferentes métodos 👾</h1>
+    <h2>¿en que dia estamos?</h2>
+    <pr>
+    <button onclick="hoyEs()">🤖 Yo te lo digo!</button>
+</pr>
+    <h2>var animals = ['elephant', 'koala', 'kangaroo', 'chimpanzee', 'gorilla'] Funcion por cada letra</h2>
+    <pr>
+    <button onclick="withA()">Con letra a</button>
+    <button onclick="withE()">Con letra e</button>
+    <button onclick="withI()">Con letra i</button>
+    <button onclick="withO()">Con letra o</button>
+</pr>
+
+<pr>
+    <h2>var animals = ['elephant', 'koala', 'kangaroo', 'chimpanzee', 'gorilla'] Funcion para cualquier letra</h2>
+    <input type="text" placeholder="Escriba una letra aqui" onchange="filterAnimalsByLetter(this.value)">
+    <input type="button" value="Buscar animales">
+</pr>
+<pr>
+    <h2>Los primeros seran los ultimos Mateo ... 1, 2, 3, 4, 5, 6, 7... Funcion reverse</h2>
+    <button onclick="reverse(nums)">Los ultimos seran los primeros</button>
+</pr>
+<pr>
+    <h2>push array, contando ovejas</h2>
+    <button onclick="pushAnimals('sheep')">¿aun con sueño? cuenta ovejas</button>
+</pr>
+<pr>
+    <h2>pop array, comiendo ovejas</h2>
+    <button onclick="popAnimals('sheep')">¿ahora con hambre? come ovejas</button>
+</pr>
+<pr>
+    <h2>every, ¿podre ir al imserso?</h2>
+    <button onclick="imserso(54, 'si')">¿Puedo ir con 54 años y viudo?</button>
+    <button onclick="imserso(56, 'si')">¿Puedo ir con 56 años y viudo?</button>
+    <button onclick="imserso(58, 'no')">¿Puedo ir con 58 años ?</button>
+    <button onclick="imserso(60, 'no')">¿Puedo ir con 60 años ?</button>
+</pr>
+<pr>
+    <h2>Registro, Averigua si puedes ir al Imserso</h2>
+        <fieldset>
+        <legend>Marque casilla según su estado civil</legend>
+        
+        <label>
+            ¿Está usted viudo? Sí
+            <input type="radio" name="widowed" value="si" />
+        </label>
+        <label>
+            No
+            <input type="radio" name="widowed" value="no" checked />
+        </label>
+        
+        <br /><br />
+        <label>
+            <input type="number" id="edad" placeholder="Ponga su edad aquí" />
+        </label>
+        
+        <br /><br />
+        <input type="button" value="Comprobar datos" onclick="imserso2()" />
+        </fieldset>    
+</pr>
+</body>
+</html>

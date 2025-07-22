@@ -1,0 +1,12 @@
+body{
+	font-family: arial, verdana, sans sans-serif;
+	background: black;
+	color: white;
+}
+
+@media (min-width:769px){
+	body{
+		background: white;
+		color: black
+	}
+}

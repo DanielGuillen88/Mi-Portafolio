@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 2</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="exercice">
+      <header>
+          2
+      </header>
+      <section>
+        <p>
+          Para cada click en la caja blanca, se tendrá que mostrar el numero total de clicks en la misma caja.
+        </p>
+      </section>
+      <footer>
+        <div id="whiteBox">
+        </div>
+      </footer>
+    </div>
+    <nav>
+      <a href="ex_01.html" class="btn prev">
+        &larr; Previous
+      </a>
+      <a href="ex_03.html" class="btn next">
+        Next &rarr;
+      </a>
+    </nav>
+  </div>
+</body>
+<script>
+        const whiteBox = document.getElementById('whiteBox');
+
+        whiteBox.addEventListener('click', () => {
+            let valueWhiteBox = parseInt(whiteBox.textContent) || 0
+            whiteBox.textContent = valueWhiteBox + 1
+        })
+</script>
+</html>
