@@ -15,7 +15,7 @@ export default function TheCorner() {
         </div>
 
             {/* Primera parte siempre visible */}
-            <p className="about-me-paragraph">
+            <p className="about-me-paragraph mt-2">
                 Tuve la oportunidad de perfeccionar la parte <b>front-end</b> en el desarrollo web en <b>The Corner</b>, donde trabajé por primera vez con compañeros presencialmente, organizando y dividiendo tareas. Todo esto, bajo la guía del profesor <a href="https://www.linkedin.com/in/marcosardelli/" target="_blank" rel="noopener noreferrer" className="teacher-link">Marco</a>.
             </p>
 

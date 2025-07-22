@@ -15,7 +15,7 @@ export default function Etif() {
         </div>
 
         {/* Primera parte siempre visible */}
-        <p className="about-me-paragraph">
+        <p className="about-me-paragraph mt-2">
             En <b>Etif</b>, obtuve el <b>Certificado Profesional en Desarrollo de Aplicaciones Web</b>. Fue una experiencia muy valiosa, tuve la oportunidad de aprender junto al profesor <a href="https://www.linkedin.com/in/williamscano/" target="_blank" rel="noopener noreferrer" className="teacher-link">Williams</a>. Aunque fue una clase pequeña, el ambiente presencial fue fundamental para mi desarrollo.
         </p>
 

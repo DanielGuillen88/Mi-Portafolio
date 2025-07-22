@@ -15,7 +15,7 @@ export default function Isdi() {
         </div>
 
         {/* Primera parte siempre visible */}
-        <p className="about-me-paragraph">
+        <p className="about-me-paragraph mt-2">
             Mi despegue en el mundo del desarrollo web y de aplicaciones full-stack comenzó en la escuela <b>ISDI Coders en Barcelona</b> junto al profesor <a href="https://www.linkedin.com/in/manuelbarzi/" target="_blank" rel="noopener noreferrer" className="teacher-link">Manu</a>, donde inicié mi aprendizaje desde cero y senté las bases de mi carrera tecnológica.
         </p>
 
