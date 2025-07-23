@@ -1,159 +1,98 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="light">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Guillen - Mi Portafolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    main {
-      flex: 1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./image/pizza.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi Portafolio</title>
+    <style>
+        /* Estilos generales para centrar el contenido y el fondo */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a202c; /* Fondo oscuro, similar a los tonos de Tailwind */
+            color: #f8fafc; /* Texto claro */
+            font-family: 'Inter', sans-serif; /* Fuente Inter */
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        /* Contenedor del texto */
+        .intro-container {
+            text-align: center;
+            opacity: 0; /* Inicialmente invisible para la animación */
+            transform: scale(0.8); /* Inicialmente más pequeño para la animación */
+            animation: fadeInScale 2s forwards ease-out; /* Aplica la animación */
+            padding: 20px;
+        }
+
+        /* Estilos para el nombre */
+        .intro-name {
+            font-size: 4rem; /* Tamaño grande para el nombre */
+            font-weight: 700; /* Negrita */
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para el mensaje de bienvenida */
+        .intro-welcome {
+            font-size: 2rem; /* Tamaño para el mensaje */
+            font-weight: 400;
+        }
+
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            .intro-name {
+                font-size: 2.5rem;
+            }
+            .intro-welcome {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .intro-name {
+                font-size: 2rem;
+            }
+            .intro-welcome {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Animación de aparición y escala */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="bg-primary text-white text-center py-4">
-    <h1 class="mb-0">Daniel Guillen - Mi Portafolio</h1>
-  </header>
-
-  <main class="container">
-    <div class="row align-items-center">
-  
-      <!-- Columna de la imagen -->
-      <div class="col-12 col-md-6 text-center p-4 mb-4 mb-md-0">
-        <a href="https://danielguillen.free.nf/" target="_blank">
-          <img 
-            src="image/cv.png"
-            alt="Enlace a la página de Daniel Guillén"
-            class="img-fluid rounded shadow-lg"
-            style="max-width: 100%; height: auto;"
-          >
-        </a>
-      </div>
-  
-      <!-- Columna de botones -->
-      <div class="col-12 col-md-6">
-
-        <div class="accordion" id="projectAccordion">
-      
-          <div class="text-center mb-3">
-            <button
-              class="btn btn-primary"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#cssProjects"
-              aria-expanded="true"
-              aria-controls="cssProjects"
-            >
-              📂 Ver lista de Proyectos con CSS
-            </button>
-          </div>
-          <div id="cssProjects" class="collapse show" data-bs-parent="#projectAccordion">
-            <ul class="list-group mb-3">
-              <li class="list-group-item"><a href="playing-css/1-position/index.html" target="_blank">1 - Position</a></li>
-              <li class="list-group-item"><a href="playing-css/2-pig/index.html" target="_blank">2 - Pig</a></li>
-              <li class="list-group-item"><a href="playing-css/3A-creeper/index.html" target="_blank">3A - Creeper</a></li>
-              <li class="list-group-item"><a href="playing-css/3B-creeper/index.html" target="_blank">3B - Creeper</a></li>
-              <li class="list-group-item"><a href="playing-css/4-octopus/index.html" target="_blank">4 - Octopus</a></li>
-              <li class="list-group-item"><a href="playing-css/5-grid/index.html" target="_blank">5 - Grid</a></li>
-              <li class="list-group-item"><a href="playing-css/6-mobile-first/index.html" target="_blank">6 - Mobile First</a></li>
-              <li class="list-group-item"><a href="playing-css/7A-bootstrap/index.html" target="_blank">7A - Bootstrap</a></li>
-              <li class="list-group-item"><a href="playing-css/7B-bootstrap/index.html" target="_blank">7B - Bootstrap</a></li>
-              <li class="list-group-item"><a href="playing-css/8-bootstrap-panda/index.html" target="_blank">8 - BS - Pandas con Manchas Blancas</a></li>
-              <li class="list-group-item"><a href="playing-css/9-bootstrap-ristorante/index.html" target="_blank">9 - BS - Ristorante .removeItem(🍍) </a></li>
-              <li class="list-group-item"><a href="playing-css/10-bootstrap-tortugas/index.html" target="_blank">10 - BS - Salvar las Tortugas</a></li>
-              <li class="list-group-item"><a href="playing-css/11-bootstrap-pepperoni/index.html" target="_blank">11 - BS - Ristorante Pepperoni</a></li>
-            </ul>
-          </div>
-      
-          <div class="text-center mb-3">
-            <button
-              class="btn btn-success"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#jsProjects"
-              aria-expanded="false"
-              aria-controls="jsProjects"
-            >
-              📂 Ver lista de Proyectos con JavaScript
-            </button>
-          </div>
-          <div id="jsProjects" class="collapse" data-bs-parent="#projectAccordion">
-            <ul class="list-group mb-3">
-              <li class="list-group-item"><a href="playing-js/1-cv-luffy/index.html" target="_blank">1 - CV Luffy</a></li>
-              <li class="list-group-item"><a href="playing-js/2-method-array/index.html" target="_blank">2 - Métodos de Array</a></li>
-              <li class="list-group-item"><a href="playing-js/3-random-color/index.html" target="_blank">3 - Random Color</a></li>
-              <li class="list-group-item"><a href="ver1/index.html" target="_blank">5 - Punto Blanco</a></li>
-              <li class="list-group-item"><a href="playing-js/5-users-list/index.html" target="_blank">5 - Users List</a></li>
-              <li class="list-group-item"><a href="playing-js/6-the-corner/index.html" target="_blank">6 - Formulario para The Corner</a></li>
-              <li class="list-group-item"><a href="playing-js/7-exercises/index.html" target="_blank">7 - Ejercicios</a></li>
-              <li class="list-group-item"><a href="playing-js/8-form/index.html" target="_blank">8 - Formulario de suscripción</a></li>
-              <li class="list-group-item"><a href="playing-js/9-tienda-jabon/index.html" target="_blank">9 - Tienda de Jabones</a></li>
-              <li class="list-group-item"><a href="playing-js/10-gestion-estudiantes/index.html" target="_blank">10 - Gestión de Estudiantes</a></li>
-              </ul>
-          </div>
-      
-          <div class="text-center mb-3">
-            <button
-              class="btn btn-warning"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#phpProjects"
-              aria-expanded="false"
-              aria-controls="phpProjects"
-            >
-              📂 Ver lista de Proyectos con PHP
-            </button>
-          </div>
-          <div id="phpProjects" class="collapse" data-bs-parent="#projectAccordion">
-            <ul class="list-group">
-              <li class="list-group-item"><a href="playing-php/1-cookies/index.php" target="_blank">1 - Cookies</a></li>
-              <li class="list-group-item"><a href="playing-php/2-gestion-trabajadores/index.html" target="_blank">2 - Gestión de Trabajadores</a></li>
-              <li class="list-group-item"><a href="playing-php/3-gestion-usuarios/index.php" target="_blank">3 - Gestión de Usuarios</a></li>
-              <li class="list-group-item"><a href="playing-php/4-mcdonalds/index.php" target="_blank">4 - McDonald's</a></li>
-              <li class="list-group-item"><a href="playing-php/5-tienda-online/index.php" target="_blank">5 - Tienda Online</a></li>
-              <li class="list-group-item"><a href="/elviaje" target="_blank">6 - WordPress - El Viaje</a></li>
-              </ul>
-          </div>
-      
-        </div>
-      
-      </div>
-  
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      <p class="mb-1">© 2025 Daniel Guillen</p>
-      <a href="https://danielguillen.free.nf/" class="text-white text-decoration-underline">Ir a la página principal</a>
-      <div class="mt-3">
-        <button id="themeToggle" class="btn btn-outline-light btn-sm">🌙 Cambiar modo</button>
-      </div>
+    <div class="intro-container">
+        <div class="intro-name">Daniel Guillén</div>
+        <div class="intro-welcome">¡Bienvenido a mi portafolio!</div>
     </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Configuración de la redirección
+        const REDIRECT_URL = 'https://tudominio.com/tu-portafolio-principal.html'; // ¡CAMBIA ESTA URL a la de tu página principal!
+        const REDIRECT_DELAY_MS = 3000; // Retraso en milisegundos (3000 ms = 3 segundos)
 
-  <!-- Dark mode toggle script -->
-  <script>
-    const toggleBtn = document.getElementById('themeToggle');
-    toggleBtn.addEventListener('click', () => {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-bs-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-bs-theme', newTheme);
-      toggleBtn.textContent = newTheme === 'dark' ? '☀️ Cambiar modo' : '🌙 Cambiar modo';
-    });
-  </script>
+        // Función para redirigir después de un retraso
+        function redirectToMainPage() {
+            setTimeout(() => {
+                window.location.href = REDIRECT_URL;
+            }, REDIRECT_DELAY_MS);
+        }
 
+        // Llama a la función de redirección cuando la página se haya cargado completamente
+        document.addEventListener('DOMContentLoaded', redirectToMainPage);
+    </script>
 </body>
 </html>
