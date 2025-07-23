@@ -10,20 +10,3 @@ html.dark-mode {
 html.dark-mode img {
   filter: invert(1) hue-rotate(180deg);
 }
-
-html.dark-mode svg,
-html.dark-mode video {
-  filter: invert(1) hue-rotate(180deg);
-}
-
-html.dark-mode p,
-html.dark-mode span,
-html.dark-mode li,
-html.dark-mode h1,
-html.dark-mode h2,
-html.dark-mode h3,
-html.dark-mode h4,
-html.dark-mode h5,
-html.dark-mode h6 {
-  filter: invert(1) hue-rotate(180deg);
-}

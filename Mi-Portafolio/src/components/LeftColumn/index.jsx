@@ -25,7 +25,7 @@ export default function LeftColumn() {
             <ProfilePhoto />
 
             <h2 className="text-3xl font-bold mt-4">Daniel Guillén</h2> 
-            <h3 className="text-xl font-medium text-blue-200 mt-1">Full Stack Developer</h3>
+            <h3 className="text-xl font-medium mt-1">Full Stack Developer</h3>
             
             {/* modo oscuro */}
             <span 
