@@ -9,6 +9,7 @@ export default function Isdi() {
 
     return (
         <div className="bg-white rounded-b-xl shadow-lg overflow-hidden mb-4">
+            {/* Encabezado actúa como botón */}
             <h3 className="accordion-header bg-white border-b-2 border-black text-black p-2 cursor-pointer flex justify-between items-center text-xl fontsemibold transition-colors duration-300 hover:bg-blue-900 hover:text-white"
                onClick={toggleAccordion}
             >
