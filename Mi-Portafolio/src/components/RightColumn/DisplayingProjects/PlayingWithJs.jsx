@@ -9,14 +9,14 @@ export default function PlayingWithJs() {
   };
 
   const jsProjects = [
-    { id: 'luffy', src: luffy, alt: 'Luffy', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'method', src: method, alt: 'Métodos de array', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'puntoblanco', src: puntoblanco, alt: 'Punto Blanco', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'thecorner', src: thecorner, alt: 'TheCorner', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'form', src: form, alt: 'Formulario', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'jabon', src: jabon, alt: 'Jabones', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'estudiantes', src: estudiantes, alt: 'Estudiantes', href: "https://danielguillen.free.nf/playing-js//index.html" },
-    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/index.html" },
+    { id: 'luffy', src: luffy, alt: 'Luffy', href: "https://danielguillen.free.nf/playing-js/1-cv-luffy/index.html" },
+    { id: 'method', src: method, alt: 'Métodos de array', href: "https://danielguillen.free.nf/playing-js/2-method-array/index.html" },
+    { id: 'puntoblanco', src: puntoblanco, alt: 'Punto Blanco', href: "https://danielguillen.free.nf/ver1/index.html" },
+    { id: 'thecorner', src: thecorner, alt: 'TheCorner', href: "https://danielguillen.free.nf/playing-js/6-the-corner/index.html" },
+    { id: 'form', src: form, alt: 'Formulario', href: "https://danielguillen.free.nf/playing-js/8-form/index.html" },
+    { id: 'jabon', src: jabon, alt: 'Jabones', href: "https://danielguillen.free.nf/playing-js/9-tienda-jabon/index.html" },
+    { id: 'estudiantes', src: estudiantes, alt: 'Estudiantes', href: "https://danielguillen.free.nf/playing-js/10-gestion-estudiantes/index.html" },
+    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/portafolio.html" },
 ];
 
       return (

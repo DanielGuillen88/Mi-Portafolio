@@ -9,13 +9,13 @@ export default function PlayingWithPhp() {
   };
 
   const phpProjects = [
-    { id: 'trabajadores', src: trabajadores, alt: 'Trabajadores', href: "https://danielguillen.free.nf/playing-php//index.html" },
-    { id: 'usuarios', src: usuarios, alt: 'Usuarios', href: "https://danielguillen.free.nf/playing-php//index.html" },
-    { id: 'mcdonalds', src: mcdonalds, alt: ' Mcdonalds', href: "https://danielguillen.free.nf/playing-php//index.html" },
-    { id: 'tienda', src: tienda, alt: 'Tienda', href: "https://danielguillen.free.nf/playing-php//index.html" },
-    { id: 'trastienda', src: trastienda, alt: 'Trastienda', href: "https://danielguillen.free.nf/playing-php//index.html" },
+    { id: 'trabajadores', src: trabajadores, alt: 'Trabajadores', href: "https://danielguillen.free.nf/playing-php/2-gestion-trabajadores/index.html" },
+    { id: 'usuarios', src: usuarios, alt: 'Usuarios', href: "https://danielguillen.free.nf/playing-php/3-gestion-usuarios/index.php" },
+    { id: 'mcdonalds', src: mcdonalds, alt: ' Mcdonalds', href: "https://danielguillen.free.nf/playing-php/4-mcdonalds/index.php" },
+    { id: 'tienda', src: tienda, alt: 'Tienda', href: "https://danielguillen.free.nf/playing-php/5-tienda-online/index.php" },
+    { id: 'trastienda', src: trastienda, alt: 'Trastienda', href: "https://danielguillen.free.nf/playing-php/5-tienda-online/index.php" },
     { id: 'elviaje', src: elviaje, alt: 'El Viaje', href: "https://danielguillen.free.nf/elviaje" },
-    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/index.html" },
+    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/portafolio.html" },
 ];
 
       return (

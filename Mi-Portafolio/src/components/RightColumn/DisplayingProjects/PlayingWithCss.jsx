@@ -16,7 +16,7 @@ export default function PlayingWithCss() {
     { id: 'ristorante', src: ristorante, alt: 'Ristorante', href: "https://danielguillen.free.nf/playing-css/9-bootstrap-ristorante/index.html" },
     { id: 'tortugas', src: tortugas, alt: 'Tortugas', href: "https://danielguillen.free.nf/playing-css/10-bootstrap-tortugas/index.html" },
     { id: 'pepperoni', src: pepperoni, alt: 'Pepperoni', href: "https://danielguillen.free.nf/playing-css/11-bootstrap-pepperoni/index.html" },
-    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/index.html" },
+    { id: 'mas', src: mas, alt: 'Mas', href: "https://danielguillen.free.nf/portafolio.html" },
 ];
 
       return (
